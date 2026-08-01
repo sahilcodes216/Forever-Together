@@ -54,3 +54,24 @@ git clone https://github.com/sahilcodes216/Forever-Together.git
 cd ForeverTogether
 ```
 3. Just open `index.html` in your browser — no build step or server needed. *(Optional: use the Live Server VS Code extension for auto-reload during editing.)*
+
+# ☁️ Deployment
+This project is deployed using Surge, a simple static site hosting CLI (Command-Line Interface).
+- Live at: https://friendship-gift.surge.sh/
+
+To deploy your own copy:
+1. Install Surge (if you haven't already):
+   
+   ```bash
+   npm install --global surge
+   ```
+2. From the project folder, run:
+
+   ```bash
+   surge
+   ```
+3. Follow the prompts to set your domain (e.g. `your-name.surge.sh`) and publish.
+
+# 🙌 Acknowledgments
+- Made with care for Friendship Day 💛
+- Background music: "Friends" by Marshmello & Anne-Marie — all rights belong to the original artists/label. Used here for personal, non-commercial     purposes only.
