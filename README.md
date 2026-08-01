@@ -8,7 +8,8 @@
 <img width="1500" height="800" alt="image" src="https://github.com/user-attachments/assets/87714f32-7178-49a0-8cd6-1c85c424a468" />
 
 # ✨ About
-- **ForeverTogether is a single-page website designed to feel like unwrapping a digital gift. It opens with an animated reveal, leads into a personalized message, and includes small interactive touches — all built to create a genuine "surprise" moment for the person opening it.**
+- **ForeverTogether is a single-page website designed to feel like unwrapping a digital gift.
+It opens with an animated reveal, leads into a personalized message, and includes small interactive touches — all built to create a genuine "surprise" moment for the person opening it.**
 **This project was built as a personal gift, then open-sourced as a template others can adapt for their own friends.**
 > 🤖 **Built by vibe-coding with AI assistance**
 > 
