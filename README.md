@@ -45,6 +45,12 @@ ForeverTogether/
 ```
 
 # 💻 Running Locally
+1. Clone the repo
 ```bash
-Clone the repo: 
-  
+git clone https://github.com/sahilcodes216/Forever-Together.git
+```
+2. Open the folder
+```bash
+cd ForeverTogether
+```
+3. Just open `index.html` in your browser — no build step or server needed. *(Optional: use the Live Server VS Code extension for auto-reload during editing.)*
