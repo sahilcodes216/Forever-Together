@@ -1,5 +1,5 @@
 # 💛 Forever-Together
-- A surprise front-end web experience made to wish a friend a happy Friendship Day,
+- A surprise front-end web experience made to wish a friend a **Happy Friendship Day,**
 - built with plain HTML, CSS, and JavaScript, no backend required.
 
 # 🚀 Live Demo: 
