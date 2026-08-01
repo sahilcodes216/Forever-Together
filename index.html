@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ForeverTogether - Happy Friendship Day!</title>
+  <meta name="description" content="A surprise personalized digital gift celebrating our special friendship!">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Pacifico&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Styling -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body data-theme="light">
+
+  <!-- Ambient Particles Background Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Top Floating Controls -->
+  <header class="top-controls" aria-label="Quick Controls">
+    <button id="music-toggle-btn" class="icon-btn" title="Toggle Ambient Lofi Music" aria-label="Toggle Audio">
+      <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+    </button>
+    <button id="theme-toggle-btn" class="icon-btn" title="Toggle Theme" aria-label="Toggle Theme">
+      <span id="theme-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </span>
+    </button>
+    <button id="btn-open-customizer" class="icon-btn" title="Personalize & Share" aria-label="Personalize Gift">
+      <svg viewBox="0 0 24 24"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+    </button>
+  </header>
+
+  <!-- 1. Landing Unwrapping Screen Overlay -->
+  <div id="landing-overlay" class="landing-overlay" role="dialog" aria-modal="true">
+    <h1 id="landing-recipient" class="landing-title">For You ✨</h1>
+    <p class="landing-subtitle">Someone has created a special digital gift just for you to celebrate Friendship Day!</p>
+
+    <div id="gift-box-trigger" class="gift-container" title="Click to Unwrap Your Surprise!">
+      <div class="gift-box">
+        <div class="gift-lid">
+          <div class="gift-ribbon-bow"></div>
+        </div>
+        <div class="gift-base"></div>
+      </div>
+    </div>
+
+    <button id="btn-open-gift" class="btn-open">
+      <span>🎁 Tap to Open Gift</span>
+    </button>
+  </div>
+
+  <!-- Main Website Content Wrapper -->
+  <main class="main-wrapper">
+
+    <!-- 2. Hero Section -->
+    <section class="hero-section">
+      <div class="badge-tag">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        <span>Happy Friendship Day</span>
+      </div>
+      <h1 class="hero-title">Forever Together with <span id="hero-friend-name">Bestie</span></h1>
+      <p class="hero-subtitle">A surprise digital gift celebrating an irreplaceable bond filled with laughter, loyalty, and unforgettable memories.</p>
+    </section>
+
+    <!-- 3. Personalized Message Section -->
+    <section class="message-card">
+      <div class="recipient-header">
+        <div class="recipient-avatar" id="recipient-avatar-char">B</div>
+        <div class="recipient-details">
+          <h3 id="recipient-display-name">Bestie</h3>
+          <p>A message straight from the heart</p>
+        </div>
+      </div>
+
+      <div class="message-body" id="typewriter-text">
+        <!-- Animated Typewriter Text Appears Here -->
+      </div>
+
+      <div class="message-footer" id="message-sender-name">
+        — With love, Your Forever Friend
+      </div>
+    </section>
+
+    <!-- 4. Friendship Stats & Counter Section -->
+    <section class="stats-grid" aria-label="Friendship Statistics">
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        </div>
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Days of Unbreakable Bond</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+        </div>
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Inside Jokes & Laughter</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+        </div>
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Late Night Talks & Coffees</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </div>
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Secrets Kept Safe</div>
+      </div>
+    </section>
+
+    <!-- 5. Memory Gallery Timeline -->
+    <section class="memories-section">
+      <div class="section-title">
+        <h2>Unforgettable Moments</h2>
+        <p>A small look back at what makes our friendship so special.</p>
+      </div>
+
+      <div class="memories-grid">
+        <article class="memory-card">
+          <div class="memory-img-container">
+            <svg class="memory-img" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ff9a9e"/>
+                  <stop offset="100%" stop-color="#fecfef"/>
+                </linearGradient>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#g1)"/>
+              <circle cx="200" cy="150" r="70" fill="rgba(255,255,255,0.25)"/>
+              <path d="M200 110 C 220 80, 260 100, 200 160 C 140 100, 180 80, 200 110 Z" fill="#ffffff" opacity="0.9"/>
+            </svg>
+          </div>
+          <div class="memory-content">
+            <span class="memory-tag">Core Memory #1</span>
+            <h3 class="memory-title">Late Night Deep Talks</h3>
+            <p class="memory-desc">From random 2 AM philosophy to talking about everything and nothing — those talks always ground me.</p>
+          </div>
+        </article>
+
+        <article class="memory-card">
+          <div class="memory-img-container">
+            <svg class="memory-img" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#a1c4fd"/>
+                  <stop offset="100%" stop-color="#c2e9fb"/>
+                </linearGradient>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#g2)"/>
+              <polygon points="200,60 250,180 150,180" fill="rgba(255,255,255,0.3)"/>
+              <circle cx="200" cy="100" r="30" fill="#ffffff" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="memory-content">
+            <span class="memory-tag">Core Memory #2</span>
+            <h3 class="memory-title">Unplanned Adventures</h3>
+            <p class="memory-desc">The best days were always the ones we never planned — spontaneously taking off and making memories on the go.</p>
+          </div>
+        </article>
+
+        <article class="memory-card">
+          <div class="memory-img-container">
+            <svg class="memory-img" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffd1ff"/>
+                  <stop offset="100%" stop-color="#fad0c4"/>
+                </linearGradient>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#g3)"/>
+              <rect x="130" y="90" width="140" height="120" rx="20" fill="rgba(255,255,255,0.3)"/>
+              <path d="M170 150 L200 120 L230 150" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="memory-content">
+            <span class="memory-tag">Core Memory #3</span>
+            <h3 class="memory-title">Always Having My Back</h3>
+            <p class="memory-desc">No matter how crazy life gets, knowing you are in my corner gives me strength every single day.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. Interactive Scratch Card Gift Section -->
+    <section class="scratch-section">
+      <div class="section-title">
+        <h2>Scratch Your Surprise Gift 🎁</h2>
+        <p>Scratch the glitter card below with your finger or mouse to uncover a secret voucher!</p>
+      </div>
+
+      <div class="scratch-card-wrapper">
+        <div class="scratch-content-hidden">
+          <div class="scratch-badge">🎉 Special Friendship Voucher</div>
+          <div class="scratch-text" id="scratch-secret-text">
+            ☕ Unlimited 3 AM Vent Sessions & Free Coffee on me!
+          </div>
+        </div>
+        <canvas id="scratch-canvas"></canvas>
+      </div>
+    </section>
+
+    <!-- 7. Action Bar & Call to Action -->
+    <section class="celebrate-actions">
+      <button id="btn-celebrate-burst" class="btn-primary">
+        <span>🥳 Celebrate Our Friendship</span>
+      </button>
+      <button id="btn-open-customizer-footer" onclick="document.getElementById('btn-open-customizer').click()" class="btn-secondary">
+        <span>💌 Send This To Another Friend</span>
+      </button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-credits">
+      <p>Made with ❤️ for Friendship Day. ForeverTogether © 2026.</p>
+    </footer>
+
+  </main>
+
+  <!-- 8. Customizer Modal & Share Generator -->
+  <div id="customizer-modal" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Personalize & Share Gift 💌</h3>
+        <button id="modal-close-btn" class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="form-group">
+        <label for="input-name">Friend's Name:</label>
+        <input type="text" id="input-name" class="form-control" placeholder="e.g. Alex, Sam, Bestie">
+      </div>
+
+      <div class="form-group">
+        <label for="input-from">Your Name (Sender):</label>
+        <input type="text" id="input-from" class="form-control" placeholder="e.g. Jordan">
+      </div>
+
+      <div class="form-group">
+        <label for="input-years">Years of Friendship:</label>
+        <input type="number" id="input-years" class="form-control" placeholder="e.g. 5">
+      </div>
+
+      <div class="form-group">
+        <label for="input-msg">Heartfelt Personal Message:</label>
+        <textarea id="input-msg" class="form-control" placeholder="Write your personalized message here..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="input-secret">Secret Scratch Card Note / Voucher:</label>
+        <input type="text" id="input-secret" class="form-control" placeholder="e.g. Lifetime Coffee Voucher!">
+      </div>
+
+      <div class="share-url-box">
+        <input type="text" id="share-url-input" readonly>
+        <button id="btn-copy-link" class="btn-primary" style="padding: 10px 18px; font-size: 0.9rem;">Copy Link</button>
+      </div>
+
+      <div style="margin-top: 16px; text-align: right;">
+        <button id="btn-preview-link" class="btn-secondary" style="padding: 10px 20px; font-size: 0.9rem;">Preview Changes Live</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CDN JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  
+  <!-- Fallback local script modules -->
+  <script src="js/sound-engine.js"></script>
+  <script src="js/scratch-card.js"></script>
+  <script src="js/customizer.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
