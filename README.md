@@ -75,6 +75,7 @@ To deploy your own copy:
    surge
    ```
 3. Follow the prompts to set your domain (e.g. `your-name.surge.sh`) and publish.
+   **NOTE: Not remove the '.surge.sh' at the end. Else you will get the DNS error.**
 
 # 🙌 Acknowledgments
 - Made with care for Friendship Day 💛
