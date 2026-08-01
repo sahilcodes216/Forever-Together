@@ -4,8 +4,9 @@
 
 # 🚀 Live Demo: 
 - https://friendship-gift.surge.sh/
-
-<img width="1500" height="800" alt="image" src="https://github.com/user-attachments/assets/87714f32-7178-49a0-8cd6-1c85c424a468" />
+  
+- Scan this to view the Live Demo:
+<img width="488" height="516" alt="ForeverTogetherQR" src="https://github.com/user-attachments/assets/7eac6a54-f25d-4889-b216-134aa9ad349d" />
 
 # ✨ About
 - **ForeverTogether is a single-page website designed to feel like unwrapping a digital gift.
